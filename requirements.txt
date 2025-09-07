@@ -1,4 +1,4 @@
-# Core scientific computing
+# Calculation Imports
 numpy==1.26.4
 pandas==2.2.2
 
@@ -6,6 +6,6 @@ pandas==2.2.2
 matplotlib==3.9.2
 seaborn==0.13.2
 
-# Machine learning Testing
+# Testing
 scikit-learn==1.5.2
 pytest==8.3.2
