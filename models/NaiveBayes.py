@@ -1,6 +1,5 @@
 import numpy as np
 
-
 class NaiveBayes(object):
     """Bernoulli Naive Bayes model
 

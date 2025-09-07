@@ -2,7 +2,6 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from models.LogisticRegression import LogisticRegression as MyLogisticRegression
 from sklearn.linear_model import LogisticRegression as SklearnLogisticRegression
-import pytest
 
 CENSUS_FILE_PATH = r"data/normalized_census.csv"
 NUM_CLASSES = 3
