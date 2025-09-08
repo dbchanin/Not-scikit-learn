@@ -1,6 +1,5 @@
 # Not‑Scikit‑Learn
 **From‑scratch ML + visual SVMs, verified against scikit‑learn/PyTorch.**  
-*A compact, readable portfolio that shows fundamentals, testing discipline, and clear communication.*
 
 ---
 
@@ -38,32 +37,27 @@ python SVM_Visualizer/main.py
 
 ---
 
-## What each model demonstrates (short, practical)
+## What each model demonstrates
 
 ### Linear Regression — `models/LinearRegression.py`
 - **Shows:** how the closed‑form **normal equation** solves regression .
 - **How:** pseudo‑inverse with explicit bias handling (append a column of 1s). Loss is average MSE.
-- **Look at:** clean math → predictable behavior; easy to reason about numerical stability.
 
 ### Multiclass Logistic Regression — `models/LogisticRegression.py`
 - **Shows:** softmax + cross‑entropy with **mini‑batch SGD** and simple convergence logic.
 - **How:** explicit softmax and gradient updates; accuracy helper to track progress.
-- **Look at:** readable training loop; no hidden framework magic.
 
 ### Bernoulli Naive Bayes — `models/NaiveBayes.py`
 - **Shows:** independence assumption in action on **0/1 features**, with **Laplace smoothing** on priors and conditionals.
 - **How:** multiplies class prior by feature likelihoods (clear math, easy to audit).  
-- **Look at:** why smoothing prevents “zero‑probability” failures.
 
 ### K‑Means (with a simple classifier wrapper) — `models/KMeans.py`
 - **Shows:** the classic **assign → update** loop, tolerance‑based convergence, and practical edge cases.
 - **How:** random centroid seeding; empty clusters are re‑seeded; majority‑label mapping turns clusters into a classifier for evaluation.
-- **Look at:** straightforward implementation you can extend to k‑means++ in minutes.
 
 ### Tiny Neural Networks — `models/NeuralNetwork.py`
 - **Shows:** forward pass, derivatives, and **manual backprop** without a framework.
 - **How:** `OneLayerNN` (linear); `TwoLayerNN` (1 hidden layer with ReLU/Sigmoid) trained with SGD; parity check vs. a matching PyTorch MLP.
-- **Look at:** gradients and weight updates spelled out line‑by‑line.
 
 ---
 
