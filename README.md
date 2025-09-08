@@ -4,7 +4,7 @@
 ---
 
 ## 30‑second overview
-This repo re‑implements several classic ML models **from first principles** and backs them up with **pytest parity checks** against reference libraries. A small SVM visualizer turns the kernel trick into pictures you can discuss in an interview.
+This repo re‑implements several classic ML models **from first principles** and backs them up with **pytest parity checks** against reference libraries. A small SVM visualizer turns the kernel trick into understandable pictures.
 
 **Review in 2–3 minutes**
 1) Skim `models/` for concise, framework‑free implementations.  
@@ -49,10 +49,10 @@ python SVM_Visualizer/main.py
 
 ### Bernoulli Naive Bayes — `models/NaiveBayes.py`
 - **Shows:** independence assumption in action on **0/1 features**, with **Laplace smoothing** on priors and conditionals.
-- **How:** multiplies class prior by feature likelihoods (clear math, easy to audit).  
+- **How:** multiplies class prior by feature likelihoods.  
 
 ### K‑Means (with a simple classifier wrapper) — `models/KMeans.py`
-- **Shows:** the classic **assign → update** loop, tolerance‑based convergence, and practical edge cases.
+- **Shows:** the **assign → update** loop, tolerance‑based convergence, and practical edge cases.
 - **How:** random centroid seeding; empty clusters are re‑seeded; majority‑label mapping turns clusters into a classifier for evaluation.
 
 ### Tiny Neural Networks — `models/NeuralNetwork.py`
