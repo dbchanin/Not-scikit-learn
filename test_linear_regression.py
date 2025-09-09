@@ -54,7 +54,7 @@ def test_linreg() -> None:
     # Padding the inputs with a bias
     X_train_b = np.append(X_train, np.ones((len(X_train), 1)), axis=1)
     X_test_b = np.append(X_test, np.ones((len(X_test), 1)), axis=1)
-
+    
     #### Testing Personal Model With Scikit Learn Model ######
     print("---- LINEAR REGRESSION w/ Matrix Inversion ---")
     solver_model = LinearRegression(num_features)

@@ -13,8 +13,8 @@ def softmax(x: np.ndarray) -> np.ndarray:
     np.ndarray
         Softmax output of the given array x
     """
-    e = np.exp(x - np.max(x))
-    return (e + 1e-6) / (np.sum(e) + 1e-6)
+    e = np.exp(x - np.max(x)) # np.max(x) for numerical stability to prevent overflow with e^x
+    return (e + 1e-6) / (np.sum(e) + 1e-6) # Adding 1e-6 to prevent division by zero
 
 
 class LogisticRegression:
@@ -115,8 +115,8 @@ class LogisticRegression:
             
 
     def loss(self, X: np.ndarray, Y: np.ndarray) -> float:
-        """Calculates average log loss on the predictions made by the model
-        on dataset X against the corresponding labels Y.
+        """Calculates average cross entropy log loss on the predictions made by 
+        the model on dataset X against the corresponding labels Y.
 
         Parameters
         ----------

@@ -107,7 +107,8 @@ class SolutionVisualization(Visualizer):
         intercept: float,
     ) -> np.ndarray:
         """  
-        Calculates H using formula (9) in the handout.
+        Calculates H(x_input) = sum(dual_coefficients_i * K(X_i, x_input)) + intercept.
+        The kernel function is just the dot product in the embedded space.
 
         Parameters
         ----------
@@ -116,7 +117,7 @@ class SolutionVisualization(Visualizer):
         x_input: np.ndarray
             A 1 x n_features numpy array representing a single data point to evaluate H on.
         dual_coefficients: np.ndarray
-            A numpy vector of coefficients of each X_data point, notated as alpha in the handout.
+            A numpy vector of coefficients of each X_data point
         intercept: float
             A scalar representing the bias term
         Returns
